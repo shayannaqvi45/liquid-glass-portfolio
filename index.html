@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syed Shayan Naqvi — Interactive Creative Developer Portfolio</title>
+    
+    <!-- Meta tags for SEO -->
+    <meta name="description" content="Portfolio of Syed Shayan Naqvi, a creative developer specializing in premium interfaces, interactive WebGL/Canvas designs, and immersive digital products." />
+    <meta name="keywords" content="frontend developer, creative developer, GSAP, portfolio, interaction designer, webgl, canvas, interactive design" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor">
+      <div class="cursor-glow"></div>
+      <div class="cursor-label">VIEW</div>
+    </div>
+
+    <!-- Fluid Background Canvas -->
+    <canvas id="canvas-bg"></canvas>
+
+    <!-- Typographic Preloader -->
+    <div id="preloader">
+      <div class="loader-bg-wrapper">
+        <svg class="loader-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path id="loader-path" d="M0,0 L100,0 L100,100 Q50,100 0,100 Z" fill="#0d0d0d"/>
+        </svg>
+      </div>
+      <div class="loader-content">
+        <div class="loader-top">
+          <span class="loader-logo">SHAYAN NAQVI</span>
+          <span class="loader-status">CREATIVE FOLIO ©2026</span>
+        </div>
+        <div class="loader-middle">
+          <div class="word-mask"><span class="loader-word">IMAGINE</span></div>
+          <div class="word-mask"><span class="loader-word">CREATE</span></div>
+          <div class="word-mask"><span class="loader-word">ELEVATE</span></div>
+        </div>
+        <div class="loader-bottom">
+          <div class="counter-container">
+            <span class="counter-number">00</span>
+            <span class="counter-percent">%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Smooth Scrolling Container (Lenis) -->
+    <div id="smooth-wrapper">
+      
+      <!-- HEADER / NAV -->
+      <header class="header">
+        <div class="container nav-container">
+          <a href="#" class="logo magnetic" data-strength="15">
+            <span class="logo-dot"></span>Shayan.N
+          </a>
+          <nav class="nav-links">
+            <a href="#work" class="nav-link magnetic hover-underline" data-strength="10">Projects</a>
+            <a href="#about" class="nav-link magnetic hover-underline" data-strength="10">About</a>
+            <a href="#services" class="nav-link magnetic hover-underline" data-strength="10">Services</a>
+            <a href="#contact" class="nav-link magnetic hover-underline" data-strength="10">Contact</a>
+          </nav>
+          <div class="menu-btn magnetic" id="menu-toggle" data-strength="15">
+            <div class="btn-burger"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+          <div class="container hero-container">
+            <div class="hero-header">
+              <div class="header-line">
+                <span class="char-wrap">CREATIVE</span>
+              </div>
+              <div class="header-line indent">
+                <span class="char-wrap">DEVELOPER</span>
+              </div>
+            </div>
+            
+            <div class="hero-middle">
+              <div class="availability-badge">
+                <span class="pulse-indicator"></span>
+                <span class="badge-text">Available for Freelance & Remote Work</span>
+              </div>
+              <div class="hero-scroll-prompt">
+                <div class="scroll-mouse">
+                  <div class="scroll-wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+              </div>
+            </div>
+
+            <div class="hero-footer">
+              <div class="footer-left">
+                <p class="hero-bio">Building immersive web experiences that merge storytelling, visual precision, and state-of-the-art physics-based animations.</p>
+              </div>
+              <div class="footer-right">
+                <a href="#work" class="explore-btn magnetic" data-strength="20">
+                  <span class="explore-text">Explore Work</span>
+                  <i class="ri-arrow-right-down-line explore-arrow"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BENTO DASHBOARD SECTION -->
+        <section class="bento-section" id="about">
+          <div class="container">
+            <div class="section-title-wrap">
+              <span class="section-subtitle">01 / DYNAMIC PROFILE</span>
+              <h2 class="section-title">DASHBOARD</h2>
+            </div>
+            
+            <div class="bento-grid">
+              
+              <!-- Card 1: Bio Detail -->
+              <div class="bento-card card-bio glass-card">
+                <div class="card-header">
+                  <i class="ri-user-smile-line card-icon"></i>
+                  <span>WHO I AM</span>
+                </div>
+                <div class="bio-content">
+                  <h3>Syed Shayan Naqvi</h3>
+                  <p>A Frontend Architect fueled by a passion for interactive arts. I construct highly scalable web products that captivate users with fluid canvas renderers, rich typography, and seamless transitions.</p>
+                </div>
+              </div>
+
+              <!-- Card 2: Interactive Live Clock -->
+              <div class="bento-card card-clock glass-card">
+                <div class="card-header">
+                  <i class="ri-time-line card-icon"></i>
+                  <span>CURRENT TIME</span>
+                </div>
+                <div class="clock-display">
+                  <div class="clock-analog">
+                    <div class="hand hour-hand"></div>
+                    <div class="hand min-hand"></div>
+                    <div class="hand sec-hand"></div>
+                    <div class="clock-center"></div>
+                  </div>
+                  <div class="clock-digital">
+                    <span id="digital-clock">00:00:00 AM</span>
+                    <span class="timezone-lbl">Karachi, PK (GMT+5)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Stack Grid -->
+              <div class="bento-card card-stack glass-card">
+                <div class="card-header">
+                  <i class="ri-code-s-slash-line card-icon"></i>
+                  <span>TECH WEAPONS</span>
+                </div>
+                <div class="stack-icons">
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="HTML5">
+                    <i class="ri-html5-fill"></i>
+                  </div>
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="CSS3">
+                    <i class="ri-css3-fill"></i>
+                  </div>
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="JavaScript">
+                    <i class="ri-javascript-fill"></i>
+                  </div>
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="GSAP Animation">
+                    <i class="ri-animation-line"></i>
+                  </div>
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="Web Audio & Canvas">
+                    <i class="ri-artboard-line"></i>
+                  </div>
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="Vite & Bundlers">
+                    <i class="ri-flashlight-line"></i>
+                  </div>
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="Git Version Control">
+                    <i class="ri-git-branch-line"></i>
+                  </div>
+                  <div class="stack-icon-wrapper magnetic" data-strength="8" title="Responsive Layouts">
+                    <i class="ri-responsive-line"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Location Map Graphic -->
+              <div class="bento-card card-map glass-card">
+                <div class="card-header">
+                  <i class="ri-map-pin-2-line card-icon"></i>
+                  <span>OPERATIONS CENTER</span>
+                </div>
+                <div class="map-graphic">
+                  <div class="radar-pulse"></div>
+                  <div class="radar-ring"></div>
+                  <div class="map-text">
+                    <h4>Pakistan</h4>
+                    <p>Working Globally</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5: Stat Dashboard -->
+              <div class="bento-card card-social glass-card">
+                <div class="card-header">
+                  <i class="ri-links-line card-icon"></i>
+                  <span>CONNECTIVITY</span>
+                </div>
+                <div class="social-links-grid">
+                  <a href="https://github.com/shayannaqvi45" target="_blank" rel="noopener noreferrer" class="social-btn magnetic" data-strength="12">
+                    <i class="ri-github-fill"></i> GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/shayannaqvi" target="_blank" rel="noopener noreferrer" class="social-btn magnetic" data-strength="12">
+                    <i class="ri-linkedin-box-fill"></i> LinkedIn
+                  </a>
+                  <a href="https://github.com/shayannaqvi45" target="_blank" rel="noopener noreferrer" class="social-btn magnetic" data-strength="12">
+                    <i class="ri-twitter-x-fill"></i> X.com
+                  </a>
+                  <a href="mailto:shayannaqvi45@gmail.com" class="social-btn magnetic" data-strength="12">
+                    <i class="ri-mail-line"></i> Email
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- WORKS / PROJECTS SECTION -->
+        <section class="work-section" id="work">
+          <div class="container">
+            <div class="section-title-wrap">
+              <span class="section-subtitle">02 / DETAILED PROJECTS</span>
+              <h2 class="section-title">SELECTED WORKS</h2>
+            </div>
+
+            <div class="work-list">
+              <!-- Work Item 1 -->
+              <div class="work-item" data-image="assets/images/project1.jpg" data-color="#00f2fe">
+                <div class="work-num">01</div>
+                <div class="work-details">
+                  <h3 class="work-title">SYNERGY CORE OS</h3>
+                  <span class="work-category">Product Design & Interactive UI</span>
+                </div>
+                <div class="work-arrow">
+                  <i class="ri-arrow-right-up-line"></i>
+                </div>
+              </div>
+
+              <!-- Work Item 2 -->
+              <div class="work-item" data-image="assets/images/project2.jpg" data-color="#ff0844">
+                <div class="work-num">02</div>
+                <div class="work-details">
+                  <h3 class="work-title">AETHER VIRTUAL PROTOCOL</h3>
+                  <span class="work-category">WebGL Dashboard & 3D Analytics</span>
+                </div>
+                <div class="work-arrow">
+                  <i class="ri-arrow-right-up-line"></i>
+                </div>
+              </div>
+
+              <!-- Work Item 3 -->
+              <div class="work-item" data-image="assets/images/project3.jpg" data-color="#fa709a">
+                <div class="work-num">03</div>
+                <div class="work-details">
+                  <h3 class="work-title">NOVA E-STORE</h3>
+                  <span class="work-category">Luxury E-commerce & Micro-animations</span>
+                </div>
+                <div class="work-arrow">
+                  <i class="ri-arrow-right-up-line"></i>
+                </div>
+              </div>
+
+              <!-- Work Item 4 -->
+              <div class="work-item" data-image="assets/images/project4.jpg" data-color="#38f9d7">
+                <div class="work-num">04</div>
+                <div class="work-details">
+                  <h3 class="work-title">GLASSMORPHIC ENGINE</h3>
+                  <span class="work-category">UI/UX Component System</span>
+                </div>
+                <div class="work-arrow">
+                  <i class="ri-arrow-right-up-line"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVICES / EXPERIENCE SECTION -->
+        <section class="services-section" id="services">
+          <div class="container">
+            <div class="section-title-wrap">
+              <span class="section-subtitle">03 / CAPABILITIES</span>
+              <h2 class="section-title">WHAT I OFFER</h2>
+            </div>
+
+            <div class="services-accordion">
+              <!-- Accordion Block 1 -->
+              <div class="accordion-item active">
+                <div class="accordion-header">
+                  <span class="acc-number">I</span>
+                  <h3 class="acc-title">Creative Coding & WebGL</h3>
+                  <div class="acc-icon-wrap">
+                    <span class="acc-icon-line h"></span>
+                    <span class="acc-icon-line v"></span>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p>Crafting canvas particle networks, organic liquid gradients, and vertex shaders. Blending art and engineering to produce user interfaces that act as dynamic canvases rather than static blocks of layout.</p>
+                </div>
+              </div>
+
+              <!-- Accordion Block 2 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <span class="acc-number">II</span>
+                  <h3 class="acc-title">Interaction Architecture</h3>
+                  <div class="acc-icon-wrap">
+                    <span class="acc-icon-line h"></span>
+                    <span class="acc-icon-line v"></span>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p>Programming complex scrolling timelines, multi-step page transitions, magnetic attraction forces, and custom velocity-calculated spring engines. Specializing in making applications feel incredibly fluid on touch and trackpad.</p>
+                </div>
+              </div>
+
+              <!-- Accordion Block 3 -->
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <span class="acc-number">III</span>
+                  <h3 class="acc-title">UI Design & Motion Systems</h3>
+                  <div class="acc-icon-wrap">
+                    <span class="acc-icon-line h"></span>
+                    <span class="acc-icon-line v"></span>
+                  </div>
+                </div>
+                <div class="accordion-content">
+                  <p>Designing modern, typography-centric layout grids using a bento architecture. Structuring components with strict typographic hierarchy, glassmorphism, responsive grids, and clean design tokens.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section" id="contact">
+          <div class="container contact-container">
+            <div class="contact-left">
+              <span class="section-subtitle">04 / COLLABORATIONS</span>
+              <h2 class="contact-headline">LET'S BUILD<br>SOMETHING<br>EXTREME.</h2>
+              <div class="contact-quick-links">
+                <div class="quick-link-item">
+                  <span class="ql-label">Direct Communication</span>
+                  <a href="mailto:shayannaqvi45@gmail.com" class="ql-value hover-underline">shayannaqvi45@gmail.com</a>
+                </div>
+                <div class="quick-link-item">
+                  <span class="ql-label">Freelance Inquiries</span>
+                  <span class="ql-value">Active & Available</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-right glass-card">
+              <form class="contact-form" id="portfolio-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" class="form-input" required placeholder=" " />
+                  <label for="name" class="form-label">YOUR NAME</label>
+                  <span class="form-line"></span>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" class="form-input" required placeholder=" " />
+                  <label for="email" class="form-label">YOUR EMAIL</label>
+                  <span class="form-line"></span>
+                </div>
+                <div class="form-group">
+                  <textarea id="message" name="message" class="form-input form-textarea" required placeholder=" "></textarea>
+                  <label for="message" class="form-label">YOUR MESSAGE</label>
+                  <span class="form-line"></span>
+                </div>
+                <button type="submit" class="submit-btn magnetic" data-strength="15">
+                  <span class="btn-ripple"></span>
+                  <span class="btn-text">DISPATCH MESSAGE</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div class="container footer-container">
+            <div class="footer-top">
+              <div class="footer-brand">
+                <h3>SHAYAN NAQVI</h3>
+                <p>Creating digital monuments through interaction design.</p>
+              </div>
+              <div class="footer-nav">
+                <a href="#hero" class="magnetic hover-underline" data-strength="10">Top</a>
+                <a href="#work" class="magnetic hover-underline" data-strength="10">Work</a>
+                <a href="#about" class="magnetic hover-underline" data-strength="10">About</a>
+                <a href="#contact" class="magnetic hover-underline" data-strength="10">Contact</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <span class="copyright">© 2026 Syed Shayan Naqvi. All Rights Reserved.</span>
+              <span class="credits">Designed & Engineered with passion.</span>
+            </div>
+          </div>
+        </footer>
+
+      </main>
+    </div>
+
+    <!-- Script imports -->
+    <!-- GSAP for core animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger for scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis for smooth scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="main.js"></script>
+  </body>
+</html>
